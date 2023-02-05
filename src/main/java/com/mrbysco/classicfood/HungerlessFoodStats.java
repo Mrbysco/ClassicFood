@@ -1,26 +1,26 @@
 package com.mrbysco.classicfood;
 
-import net.minecraft.entity.player.PlayerEntity;
-import net.minecraft.item.Food;
-import net.minecraft.item.Item;
-import net.minecraft.item.ItemStack;
-import net.minecraft.nbt.CompoundNBT;
-import net.minecraft.util.FoodStats;
+import net.minecraft.nbt.CompoundTag;
+import net.minecraft.world.entity.player.Player;
+import net.minecraft.world.food.FoodData;
+import net.minecraft.world.food.FoodProperties;
+import net.minecraft.world.item.Item;
+import net.minecraft.world.item.ItemStack;
 
 import java.util.ArrayList;
 import java.util.List;
 import java.util.function.Consumer;
 
-public class HungerlessFoodStats extends FoodStats {
+public class HungerlessFoodStats extends FoodData {
 	private float currentHealth;
 	private float maxHealth;
-	private final List<Consumer<PlayerEntity>> list = new ArrayList<>();
+	private final List<Consumer<Player>> list = new ArrayList<>();
 
 	public HungerlessFoodStats() {
 	}
 
 	@Override
-	public void tick(PlayerEntity player) {
+	public void tick(Player player) {
 		this.currentHealth = player.getHealth();
 		this.maxHealth = player.getMaxHealth();
 
@@ -54,11 +54,11 @@ public class HungerlessFoodStats extends FoodStats {
 	}
 
 	@Override
-	public void readAdditionalSaveData(CompoundNBT compoundNBT) {
+	public void readAdditionalSaveData(CompoundTag compoundNBT) {
 	}
 
 	@Override
-	public void addAdditionalSaveData(CompoundNBT compoundNBT) {
+	public void addAdditionalSaveData(CompoundTag compoundNBT) {
 	}
 
 	@Override
@@ -69,7 +69,7 @@ public class HungerlessFoodStats extends FoodStats {
 	@Override
 	public void eat(Item item, ItemStack stack) {
 		if (item.isEdible()) {
-			Food food = item.getFoodProperties();
+			FoodProperties food = item.getFoodProperties();
 			if (food != null) {
 				heal(food.getNutrition());
 			}

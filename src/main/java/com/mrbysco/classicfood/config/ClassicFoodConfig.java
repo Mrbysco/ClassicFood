@@ -3,7 +3,7 @@ package com.mrbysco.classicfood.config;
 import com.mrbysco.classicfood.ClassicFood;
 import net.minecraftforge.common.ForgeConfigSpec;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
-import net.minecraftforge.fml.config.ModConfig;
+import net.minecraftforge.fml.event.config.ModConfigEvent;
 import org.apache.commons.lang3.tuple.Pair;
 
 public class ClassicFoodConfig {
@@ -38,12 +38,12 @@ public class ClassicFoodConfig {
 	}
 
 	@SubscribeEvent
-	public static void onLoad(final ModConfig.Loading configEvent) {
+	public static void onLoad(final ModConfigEvent.Loading configEvent) {
 		ClassicFood.LOGGER.debug("Loaded Classic Food's config file {}", configEvent.getConfig().getFileName());
 	}
 
 	@SubscribeEvent
-	public static void onFileChange(final ModConfig.Reloading configEvent) {
+	public static void onFileChange(final ModConfigEvent.Reloading configEvent) {
 		ClassicFood.LOGGER.debug("Classic Food's config just got changed on the file system!");
 	}
 }
