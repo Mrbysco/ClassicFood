@@ -1,12 +1,15 @@
 {
   "required": true,
-  "minVersion": "0.8",
+  "minVersion": "0.8.4",
+  "compatibilityLevel": "JAVA_16",
   "package": "com.mrbysco.classicfood.mixin",
   "refmap": "classicfood.refmap.json",
   "target": "@env(DEFAULT)",
-  "compatibilityLevel": "JAVA_8",
   "mixins": [
     "ItemMixin",
     "PlayerMixin"
-  ]
+  ],
+  "injectors": {
+    "defaultRequire": 1
+  }
 }
