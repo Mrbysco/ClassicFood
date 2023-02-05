@@ -1,0 +1,20 @@
+modLoader="javafml"
+loaderVersion="[36,)"
+issueTrackerURL="https://github.com/Mrbysco/ClassicFood/issues"
+license="MIT"
+
+[[mods]]
+modId="classicfood"
+version="${file.jarVersion}"
+displayName="Classic Food"
+displayURL="https://www.curseforge.com/minecraft/mc-mods/classic-food"
+authors="Mrbysco, ShyNieke"
+description='''
+Reimplements the old food to health system
+'''
+[[dependencies.classicfood]]
+modId="minecraft"
+mandatory=true
+versionRange="[1.16.4,1.17)"
+ordering="NONE"
+side="BOTH"
