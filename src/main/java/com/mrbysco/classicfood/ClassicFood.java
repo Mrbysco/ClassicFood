@@ -3,6 +3,7 @@ package com.mrbysco.classicfood;
 import com.mrbysco.classicfood.client.ClientHandler;
 import com.mrbysco.classicfood.config.ClassicFoodConfig;
 import net.minecraftforge.api.distmarker.Dist;
+import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.fml.DistExecutor;
 import net.minecraftforge.fml.ModLoadingContext;
@@ -23,7 +24,7 @@ public class ClassicFood {
 		eventBus.register(ClassicFoodConfig.class);
 
 		DistExecutor.unsafeRunWhenOn(Dist.CLIENT, () -> () -> {
-			eventBus.addListener(ClientHandler::onClientSetup);
+			MinecraftForge.EVENT_BUS.addListener(ClientHandler::onGameOverlayRender);
 		});
 	}
 }

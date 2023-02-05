@@ -1,11 +1,13 @@
 package com.mrbysco.classicfood.client;
 
-import net.minecraftforge.client.gui.ForgeIngameGui;
-import net.minecraftforge.client.gui.OverlayRegistry;
-import net.minecraftforge.fml.event.lifecycle.FMLClientSetupEvent;
+import net.minecraft.resources.ResourceLocation;
+import net.minecraftforge.client.event.RenderGuiOverlayEvent;
+import net.minecraftforge.client.gui.overlay.GuiOverlayManager;
 
 public class ClientHandler {
-	public static void onClientSetup(final FMLClientSetupEvent event) {
-		OverlayRegistry.enableOverlay(ForgeIngameGui.FOOD_LEVEL_ELEMENT, false);
+	public static void onGameOverlayRender(RenderGuiOverlayEvent.Pre event) {
+		if (event.getOverlay() == GuiOverlayManager.findOverlay(new ResourceLocation("food_level"))) {
+			event.setCanceled(true);
+		}
 	}
 }
