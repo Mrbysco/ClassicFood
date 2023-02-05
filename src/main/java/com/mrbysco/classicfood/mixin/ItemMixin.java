@@ -19,7 +19,7 @@ public class ItemMixin {
 	@Inject(at = @At("HEAD"), method = "getMaxStackSize", cancellable = true)
 	private void classicfood_getMaxStackSize(CallbackInfoReturnable<Integer> cir) {
 		Item item = (Item) (Object) this;
-		if (ClassicFoodConfig.COMMON.unstackable.get() && item.getItem().isEdible())
+		if (ClassicFoodConfig.COMMON.unstackable.get() && item.isEdible())
 			cir.setReturnValue(1);
 	}
 }
