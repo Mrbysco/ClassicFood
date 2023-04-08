@@ -1,6 +1,5 @@
 [![build](https://github.com/Mrbysco/ClassicFood/actions/workflows/build.yml/badge.svg)](https://github.com/Mrbysco/ClassicFood/actions/workflows/build.yml) 
 [![](http://cf.way2muchnoise.eu/versions/822475.svg)](https://www.curseforge.com/minecraft/mc-mods/classic-food)
-[![](https://modrinth-utils.vercel.app/api/badge/versions?id=gACd0cTc)](https://modrinth.com/mod/classic-food)
 
 # Classic Food #
 
