@@ -1,8 +1,8 @@
 package com.mrbysco.classicfood.client;
 
 import net.minecraft.resources.ResourceLocation;
-import net.minecraftforge.client.event.RenderGuiOverlayEvent;
-import net.minecraftforge.client.gui.overlay.GuiOverlayManager;
+import net.neoforged.neoforge.client.event.RenderGuiOverlayEvent;
+import net.neoforged.neoforge.client.gui.overlay.GuiOverlayManager;
 
 public class ClientHandler {
 	public static void onGameOverlayRender(RenderGuiOverlayEvent.Pre event) {

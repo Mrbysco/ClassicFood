@@ -1,5 +1,5 @@
 modLoader="javafml"
-loaderVersion="[45,)"
+loaderVersion="[1,)"
 issueTrackerURL="https://github.com/Mrbysco/ClassicFood/issues"
 license="MIT"
 
@@ -15,6 +15,13 @@ Reimplements the old food to health system
 [[dependencies.classicfood]]
 modId="minecraft"
 mandatory=true
-versionRange="[1.20,1.21)"
+versionRange="[1.20.2,1.21)"
 ordering="NONE"
 side="BOTH"
+[[dependencies.classicfood]]
+modId="neoforge"
+mandatory=true
+versionRange="[20.2.59-beta,)"
+ordering="NONE"
+[[mixins]]
+config = "classicfood.mixins.json"

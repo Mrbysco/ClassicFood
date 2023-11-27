@@ -4,7 +4,7 @@ import com.mrbysco.classicfood.config.ClassicFoodConfig;
 import net.minecraft.world.effect.MobEffectInstance;
 import net.minecraft.world.effect.MobEffects;
 import net.minecraft.world.entity.player.Player;
-import net.minecraftforge.event.TickEvent;
+import net.neoforged.neoforge.event.TickEvent;
 
 public class PoisonHandler {
 	public static void onPlayerTick(TickEvent.PlayerTickEvent event) {
