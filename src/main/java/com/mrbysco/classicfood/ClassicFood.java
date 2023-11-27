@@ -2,6 +2,7 @@ package com.mrbysco.classicfood;
 
 import com.mrbysco.classicfood.client.ClientHandler;
 import com.mrbysco.classicfood.config.ClassicFoodConfig;
+import com.mrbysco.classicfood.handler.PoisonHandler;
 import net.minecraftforge.api.distmarker.Dist;
 import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.eventbus.api.IEventBus;
@@ -22,6 +23,8 @@ public class ClassicFood {
 		IEventBus eventBus = FMLJavaModLoadingContext.get().getModEventBus();
 		ModLoadingContext.get().registerConfig(ModConfig.Type.COMMON, ClassicFoodConfig.commonSpec);
 		eventBus.register(ClassicFoodConfig.class);
+
+		MinecraftForge.EVENT_BUS.addListener(PoisonHandler::onPlayerTick);
 
 		DistExecutor.unsafeRunWhenOn(Dist.CLIENT, () -> () -> {
 			MinecraftForge.EVENT_BUS.addListener(ClientHandler::onGameOverlayRender);

@@ -1,6 +1,8 @@
 package com.mrbysco.classicfood;
 
+import com.mrbysco.classicfood.config.ClassicFoodConfig;
 import net.minecraft.nbt.CompoundTag;
+import net.minecraft.util.Mth;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.food.FoodData;
 import net.minecraft.world.food.FoodProperties;
@@ -71,7 +73,7 @@ public class HungerlessFoodStats extends FoodData {
 		if (item.isEdible()) {
 			FoodProperties food = item.getFoodProperties();
 			if (food != null) {
-				heal(food.getNutrition());
+				heal(Mth.ceil(food.getNutrition() * ClassicFoodConfig.COMMON.foodToHealRatio.get().floatValue()));
 			}
 		}
 	}

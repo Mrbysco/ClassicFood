@@ -10,6 +10,8 @@ public class ClassicFoodConfig {
 	public static class Common {
 		public final ForgeConfigSpec.BooleanValue instantFood;
 		public final ForgeConfigSpec.BooleanValue unstackable;
+		public final ForgeConfigSpec.BooleanValue poisonousHunger;
+		public final ForgeConfigSpec.DoubleValue foodToHealRatio;
 
 		Common(ForgeConfigSpec.Builder builder) {
 			//General settings
@@ -23,6 +25,14 @@ public class ClassicFoodConfig {
 			unstackable = builder
 					.comment("When enabled food items won't be able to stack (Default: false)")
 					.define("unstackable", false);
+
+			poisonousHunger = builder
+					.comment("When enabled hunger will act similar to poison (Default: false)")
+					.define("poisonousHunger", false);
+
+			foodToHealRatio = builder
+					.comment("The amount of food points that will heal 1 health point (Default: 1.0)")
+					.defineInRange("foodToHealRatio", 1.0D, 0.0D, 8.0D);
 
 			builder.pop();
 		}
