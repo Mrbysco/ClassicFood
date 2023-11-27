@@ -1,1 +1,2 @@
-* Initial update to 1.20
+* Add config option `poisonousHunger` which will make hunger act like poison (by default it's set to false)
+* Add config option `foodToHealRatio` which dictates the ratio in which saturation is turned into health when eating (By default it's set to 1.0)
