@@ -8,6 +8,7 @@ import net.minecraft.world.food.FoodData;
 import net.minecraft.world.food.FoodProperties;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.item.ItemStack;
+import org.jetbrains.annotations.NotNull;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -56,11 +57,11 @@ public class HungerlessFoodStats extends FoodData {
 	}
 
 	@Override
-	public void readAdditionalSaveData(CompoundTag compoundNBT) {
+	public void readAdditionalSaveData(@NotNull CompoundTag compoundNBT) {
 	}
 
 	@Override
-	public void addAdditionalSaveData(CompoundTag compoundNBT) {
+	public void addAdditionalSaveData(@NotNull CompoundTag compoundNBT) {
 	}
 
 	@Override
@@ -69,9 +70,9 @@ public class HungerlessFoodStats extends FoodData {
 	}
 
 	@Override
-	public void eat(Item item, ItemStack stack) {
+	public void eat(Item item, @NotNull ItemStack stack) {
 		if (item.isEdible()) {
-			FoodProperties food = item.getFoodProperties();
+			FoodProperties food = stack.getFoodProperties(null);
 			if (food != null) {
 				heal(Mth.ceil(food.getNutrition() * ClassicFoodConfig.COMMON.foodToHealRatio.get().floatValue()));
 			}
