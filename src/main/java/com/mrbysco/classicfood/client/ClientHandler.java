@@ -1,12 +1,11 @@
 package com.mrbysco.classicfood.client;
 
-import net.minecraft.resources.ResourceLocation;
-import net.neoforged.neoforge.client.event.RenderGuiOverlayEvent;
-import net.neoforged.neoforge.client.gui.overlay.GuiOverlayManager;
+import net.neoforged.neoforge.client.event.RenderGuiLayerEvent;
+import net.neoforged.neoforge.client.gui.VanillaGuiLayers;
 
 public class ClientHandler {
-	public static void onGameOverlayRender(RenderGuiOverlayEvent.Pre event) {
-		if (event.getOverlay() == GuiOverlayManager.findOverlay(new ResourceLocation("food_level"))) {
+	public static void onGameOverlayRender(RenderGuiLayerEvent.Pre event) {
+		if (event.getName().equals(VanillaGuiLayers.FOOD_LEVEL)) {
 			event.setCanceled(true);
 		}
 	}

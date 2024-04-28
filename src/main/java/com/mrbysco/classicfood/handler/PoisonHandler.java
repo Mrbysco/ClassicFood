@@ -4,12 +4,12 @@ import com.mrbysco.classicfood.config.ClassicFoodConfig;
 import net.minecraft.world.effect.MobEffectInstance;
 import net.minecraft.world.effect.MobEffects;
 import net.minecraft.world.entity.player.Player;
-import net.neoforged.neoforge.event.TickEvent;
+import net.neoforged.neoforge.event.tick.PlayerTickEvent;
 
 public class PoisonHandler {
-	public static void onPlayerTick(TickEvent.PlayerTickEvent event) {
-		if (event.phase == TickEvent.Phase.START && event.side.isServer()) {
-			Player player = event.player;
+	public static void onPlayerTick(PlayerTickEvent.Pre event) {
+		Player player = event.getEntity();
+		if (!player.level().isClientSide()) {
 			if (ClassicFoodConfig.COMMON.poisonousHunger.get() && player.hasEffect(MobEffects.HUNGER)) {
 				MobEffectInstance instance = player.getEffect(MobEffects.HUNGER);
 				if (instance != null) {
