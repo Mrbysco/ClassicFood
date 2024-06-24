@@ -1,9 +1,9 @@
 package com.mrbysco.classicfood.config;
 
 import com.mrbysco.classicfood.ClassicFood;
-import net.neoforged.neoforge.common.ModConfigSpec;
 import net.neoforged.bus.api.SubscribeEvent;
 import net.neoforged.fml.event.config.ModConfigEvent;
+import net.neoforged.neoforge.common.ModConfigSpec;
 import org.apache.commons.lang3.tuple.Pair;
 
 public class ClassicFoodConfig {

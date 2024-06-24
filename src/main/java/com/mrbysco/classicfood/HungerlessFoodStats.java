@@ -1,16 +1,12 @@
 package com.mrbysco.classicfood;
 
 import com.mrbysco.classicfood.config.ClassicFoodConfig;
-import net.minecraft.core.component.DataComponents;
 import net.minecraft.nbt.CompoundTag;
 import net.minecraft.util.Mth;
-import net.minecraft.world.entity.LivingEntity;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.food.FoodData;
 import net.minecraft.world.food.FoodProperties;
-import net.minecraft.world.item.ItemStack;
 import org.jetbrains.annotations.NotNull;
-import org.jetbrains.annotations.Nullable;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -72,12 +68,9 @@ public class HungerlessFoodStats extends FoodData {
 	}
 
 	@Override
-	public void eat(ItemStack stack, @Nullable LivingEntity livingEntity) {
-		if (stack.has(DataComponents.FOOD)) {
-			FoodProperties food = stack.getFoodProperties(null);
-			if (food != null) {
-				heal(Mth.ceil(food.nutrition() * ClassicFoodConfig.COMMON.foodToHealRatio.get().floatValue()));
-			}
+	public void eat(FoodProperties food) {
+		if (food != null) {
+			heal(Mth.ceil(food.nutrition() * ClassicFoodConfig.COMMON.foodToHealRatio.get().floatValue()));
 		}
 	}
 
