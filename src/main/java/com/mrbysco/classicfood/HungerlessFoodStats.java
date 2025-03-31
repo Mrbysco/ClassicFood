@@ -2,6 +2,7 @@ package com.mrbysco.classicfood;
 
 import com.mrbysco.classicfood.config.ClassicFoodConfig;
 import net.minecraft.nbt.CompoundTag;
+import net.minecraft.server.level.ServerPlayer;
 import net.minecraft.util.Mth;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.food.FoodData;
@@ -21,7 +22,7 @@ public class HungerlessFoodStats extends FoodData {
 	}
 
 	@Override
-	public void tick(Player player) {
+	public void tick(ServerPlayer player) {
 		this.currentHealth = player.getHealth();
 		this.maxHealth = player.getMaxHealth();
 
