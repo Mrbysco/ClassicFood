@@ -8,5 +8,15 @@
   "classicfood.configuration.foodToHealRatio": "Food to Heal Ratio",
   "classicfood.configuration.foodToHealRatio.tooltip": "The amount of food points that will heal 1 health point (Default: 1.0)",
   "classicfood.configuration.unstackable": "Unstackable",
-  "classicfood.configuration.unstackable.tooltip": "When enabled food items won't be able to stack (Default: false)"
+  "classicfood.configuration.unstackable.tooltip": "When enabled food items won't be able to stack (Default: false)",
+  "text.autoconfig.classicfood.option.general": "General",
+  "text.autoconfig.classicfood.option.general.poisonousHunger": "Poisonous Hunger",
+  "text.autoconfig.classicfood.option.general.poisonousHunger.@Tooltip": "If enabled, poisonous foods will cause hunger when eaten",
+  "text.autoconfig.classicfood.option.general.instantFood": "Instant Food",
+  "text.autoconfig.classicfood.option.general.instantFood.@Tooltip": "When enabled food will be eaten instantly (Default: false)",
+  "text.autoconfig.classicfood.option.general.foodToHealRatio": "Food to Heal Ratio",
+  "text.autoconfig.classicfood.option.general.foodToHealRatio.@Tooltip": "The amount of food points that will heal 1 health point (Default: 1.0)",
+  "text.autoconfig.classicfood.option.general.unstackable": "Unstackable",
+  "text.autoconfig.classicfood.option.general.unstackable.@Tooltip": "When enabled food items won't be able to stack (Default: false)",
+  "text.autoconfig.classicfood.title": "Classic Food"
 }
