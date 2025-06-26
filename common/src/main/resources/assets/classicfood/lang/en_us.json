@@ -1,0 +1,12 @@
+{
+  "classicfood.configuration.general": "General",
+  "classicfood.configuration.general.tooltip": "General Settings",
+  "classicfood.configuration.poisonousHunger": "Poisonous Hunger",
+  "classicfood.configuration.poisonousHunger.tooltip": "If enabled, poisonous foods will cause hunger when eaten",
+  "classicfood.configuration.instantFood": "Instant Food",
+  "classicfood.configuration.instantFood.tooltip": "When enabled food will be eaten instantly (Default: false)",
+  "classicfood.configuration.foodToHealRatio": "Food to Heal Ratio",
+  "classicfood.configuration.foodToHealRatio.tooltip": "The amount of food points that will heal 1 health point (Default: 1.0)",
+  "classicfood.configuration.unstackable": "Unstackable",
+  "classicfood.configuration.unstackable.tooltip": "When enabled food items won't be able to stack (Default: false)"
+}

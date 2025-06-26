@@ -1,0 +1,17 @@
+{
+  "required": true,
+  "minVersion": "0.8.4",
+  "package": "com.mrbysco.classicfood.mixin",
+  "refmap": "classicfood.refmap.json",
+  "compatibilityLevel": "JAVA_21",
+  "mixins": [
+    "MixinPlayer"
+  ],
+  "client": [
+    "GuiMixin"
+  ],
+  "injectors": {
+    "defaultRequire": 1
+  }
+}
+  

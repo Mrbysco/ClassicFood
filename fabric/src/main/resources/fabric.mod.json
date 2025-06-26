@@ -1,0 +1,36 @@
+{
+  "schemaVersion": 1,
+  "id": "classicfood",
+  "version": "${version}",
+  "name": "Classic Food",
+  "description": "Reimplements the old food to health system",
+  "authors": [
+    "Mrbysco", "ShyNieke"
+  ],
+  "contact": {
+    "homepage": "https://www.curseforge.com/minecraft/mc-mods/classic-food",
+    "sources": "https://github.com/Mrbysco/ClassicFood",
+    "issues": "https://github.com/Mrbysco/ClassicFood/issues"
+  },
+  "license": "MIT",
+  "environment": "*",
+  "entrypoints": {
+    "main": [
+      "com.mrbysco.classicfood.ClassicFoodFabric"
+    ],
+    "modmenu": [
+      "com.mrbysco.classicfood.config.ClassicModMenuIntegration"
+    ]
+  },
+  "mixins": [
+    "classicfood.fabric.mixins.json",
+    "classicfood.mixins.json"
+  ],
+  "depends": {
+    "fabricloader": ">=0.16.10",
+    "minecraft": "~1.21.5",
+    "java": ">=21",
+    "fabric-api": "*"
+  }
+}
+  
