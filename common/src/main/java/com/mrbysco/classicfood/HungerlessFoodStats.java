@@ -7,6 +7,8 @@ import net.minecraft.util.Mth;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.food.FoodData;
 import net.minecraft.world.food.FoodProperties;
+import net.minecraft.world.level.storage.ValueInput;
+import net.minecraft.world.level.storage.ValueOutput;
 import org.jetbrains.annotations.NotNull;
 
 import java.util.ArrayList;
@@ -56,11 +58,11 @@ public class HungerlessFoodStats extends FoodData {
 	}
 
 	@Override
-	public void readAdditionalSaveData(@NotNull CompoundTag compoundNBT) {
+	public void readAdditionalSaveData(@NotNull ValueInput valueInput) {
 	}
 
 	@Override
-	public void addAdditionalSaveData(@NotNull CompoundTag compoundNBT) {
+	public void addAdditionalSaveData(@NotNull ValueOutput output) {
 	}
 
 	@Override
