@@ -70,12 +70,9 @@ public class HungerlessFoodStats extends FoodData {
 		this.heal(hunger);
 	}
 
-	@SuppressWarnings("ConstantValue")
 	@Override
-	public void eat(FoodProperties food) {
-		if (food != null) {
-			heal(Mth.ceil(food.nutrition() * Services.PLATFORM.getFoodToHealRatio()));
-		}
+	public void eat(@NotNull FoodProperties food) {
+		heal(Mth.ceil(food.nutrition() * Services.PLATFORM.getFoodToHealRatio()));
 	}
 
 	public void heal(float amount) {
