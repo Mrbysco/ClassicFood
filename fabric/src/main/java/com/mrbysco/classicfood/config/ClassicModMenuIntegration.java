@@ -2,11 +2,11 @@ package com.mrbysco.classicfood.config;
 
 import com.terraformersmc.modmenu.api.ConfigScreenFactory;
 import com.terraformersmc.modmenu.api.ModMenuApi;
-import me.shedaniel.autoconfig.AutoConfig;
+import me.shedaniel.autoconfig.AutoConfigClient;
 
 public class ClassicModMenuIntegration implements ModMenuApi {
 	@Override
 	public ConfigScreenFactory<?> getModConfigScreenFactory() {
-		return parent -> AutoConfig.getConfigScreen(ClassicFoodConfig.class, parent).get();
+		return parent -> AutoConfigClient.getConfigScreen(ClassicFoodConfig.class, parent).get();
 	}
 }

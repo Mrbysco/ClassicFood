@@ -1,7 +1,6 @@
 package com.mrbysco.classicfood;
 
 import com.mrbysco.classicfood.platform.Services;
-import net.minecraft.nbt.CompoundTag;
 import net.minecraft.server.level.ServerPlayer;
 import net.minecraft.util.Mth;
 import net.minecraft.world.entity.player.Player;
