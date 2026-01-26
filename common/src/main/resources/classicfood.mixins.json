@@ -4,6 +4,7 @@
   "compatibilityLevel": "JAVA_21",
   "package": "com.mrbysco.classicfood.mixin",
   "target": "@env(DEFAULT)",
+  "refmap": "classicfood.refmap.json",
   "mixins": [
     "ItemStackMixin",
     "PlayerMixin"
