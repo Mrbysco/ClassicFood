@@ -4,10 +4,7 @@
   "package": "com.mrbysco.classicfood.mixin",
   "compatibilityLevel": "JAVA_25",
   "mixins": [
-    "MixinPlayer"
-  ],
-  "client": [
-    "GuiMixin"
+    "ItemStackMixin2"
   ],
   "injectors": {
     "defaultRequire": 1

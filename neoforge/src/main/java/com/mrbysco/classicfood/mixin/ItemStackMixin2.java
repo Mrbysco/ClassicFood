@@ -9,9 +9,9 @@ import org.spongepowered.asm.mixin.injection.Inject;
 import org.spongepowered.asm.mixin.injection.callback.CallbackInfoReturnable;
 
 @Mixin(ItemStack.class)
-public abstract class ItemStackMixin {
+public abstract class ItemStackMixin2 {
 
-	@Inject(at = @At("HEAD"), method = "getUseDuration", cancellable = true)
+	@Inject(at = @At("HEAD"), method = "getMaxStackSize()I", cancellable = true)
 	private void classicfood_getUseDuration(CallbackInfoReturnable<Integer> cir) {
 		ItemStack stack = (ItemStack) (Object) this;
 		if (ClassicFoodConfig.COMMON.instantFood.get() && stack.has(DataComponents.FOOD))

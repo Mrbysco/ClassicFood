@@ -1,6 +1,6 @@
 package com.mrbysco.classicfood;
 
-import com.mrbysco.classicfood.platform.Services;
+import com.mrbysco.classicfood.config.ClassicFoodConfig;
 import net.minecraft.server.level.ServerPlayer;
 import net.minecraft.util.Mth;
 import net.minecraft.world.entity.player.Player;
@@ -71,7 +71,7 @@ public class HungerlessFoodStats extends FoodData {
 
 	@Override
 	public void eat(@NotNull FoodProperties food) {
-		heal(Mth.ceil(food.nutrition() * Services.PLATFORM.getFoodToHealRatio()));
+		heal(Mth.ceil(food.nutrition() * ClassicFoodConfig.COMMON.foodToHealRatio.get()));
 	}
 
 	public void heal(float amount) {

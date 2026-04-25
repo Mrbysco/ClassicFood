@@ -1,16 +1,14 @@
 package com.mrbysco.classicfood;
 
 import com.mrbysco.classicfood.config.ClassicFoodConfig;
-import me.shedaniel.autoconfig.AutoConfig;
-import me.shedaniel.autoconfig.ConfigHolder;
-import me.shedaniel.autoconfig.serializer.Toml4jConfigSerializer;
+import fuzs.forgeconfigapiport.fabric.api.v5.ConfigRegistry;
 import net.fabricmc.api.ModInitializer;
+import net.neoforged.fml.config.ModConfig;
 
 public class ClassicFoodFabric implements ModInitializer {
-	public static ConfigHolder<ClassicFoodConfig> config;
 
 	@Override
 	public void onInitialize() {
-		config = AutoConfig.register(ClassicFoodConfig.class, Toml4jConfigSerializer::new);
+		ConfigRegistry.INSTANCE.register(Constants.MOD_ID, ModConfig.Type.COMMON, ClassicFoodConfig.commonSpec);
 	}
 }

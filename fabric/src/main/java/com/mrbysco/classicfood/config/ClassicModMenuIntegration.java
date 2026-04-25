@@ -1,12 +1,14 @@
 package com.mrbysco.classicfood.config;
 
+import com.mrbysco.classicfood.Constants;
 import com.terraformersmc.modmenu.api.ConfigScreenFactory;
 import com.terraformersmc.modmenu.api.ModMenuApi;
-import me.shedaniel.autoconfig.AutoConfigClient;
+import net.minecraft.client.gui.screens.Screen;
+import net.neoforged.neoforge.client.gui.ConfigurationScreen;
 
 public class ClassicModMenuIntegration implements ModMenuApi {
 	@Override
 	public ConfigScreenFactory<?> getModConfigScreenFactory() {
-		return parent -> AutoConfigClient.getConfigScreen(ClassicFoodConfig.class, parent).get();
+		return (Screen screen) -> new ConfigurationScreen(Constants.MOD_ID, screen);
 	}
 }
