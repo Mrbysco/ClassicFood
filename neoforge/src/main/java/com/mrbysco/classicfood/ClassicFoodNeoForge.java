@@ -15,7 +15,7 @@ import net.neoforged.neoforge.event.tick.PlayerTickEvent;
 public class ClassicFoodNeoForge {
 
 	public ClassicFoodNeoForge(Dist dist, ModContainer container) {
-		container.registerConfig(ModConfig.Type.COMMON, ClassicFoodConfig.commonSpec);
+		container.registerConfig(ModConfig.Type.LOCAL, ClassicFoodConfig.commonSpec);
 
 		NeoForge.EVENT_BUS.addListener(this::onPlayerTick);
 
